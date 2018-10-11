@@ -13,6 +13,9 @@
 		E7AC5129216EDFE100720983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7AC5128216EDFE100720983 /* Assets.xcassets */; };
 		E7AC512C216EDFE100720983 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7AC512A216EDFE100720983 /* LaunchScreen.storyboard */; };
 		E7AC512F216EDFE100720983 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AC512E216EDFE100720983 /* main.m */; };
+		E7AC513D216EE0EF00720983 /* ZHView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AC513A216EE0EE00720983 /* ZHView.m */; };
+		E7AC513E216EE0EF00720983 /* ZHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AC513B216EE0EF00720983 /* ZHButton.m */; };
+		E7AC513F216EE0EF00720983 /* UIView+ZHIBInspectable.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AC513C216EE0EF00720983 /* UIView+ZHIBInspectable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		E7AC512B216EDFE100720983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7AC512D216EDFE100720983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7AC512E216EDFE100720983 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E7AC5137216EE0EE00720983 /* ZHButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHButton.h; sourceTree = "<group>"; };
+		E7AC5138216EE0EE00720983 /* ZHView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHView.h; sourceTree = "<group>"; };
+		E7AC5139216EE0EE00720983 /* UIView+ZHIBInspectable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZHIBInspectable.h"; sourceTree = "<group>"; };
+		E7AC513A216EE0EE00720983 /* ZHView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHView.m; sourceTree = "<group>"; };
+		E7AC513B216EE0EF00720983 /* ZHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHButton.m; sourceTree = "<group>"; };
+		E7AC513C216EE0EF00720983 /* UIView+ZHIBInspectable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZHIBInspectable.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 		E7AC511E216EDFE000720983 /* ZHViewHelper */ = {
 			isa = PBXGroup;
 			children = (
+				E7AC5135216EE0A400720983 /* Sources */,
 				E7AC511F216EDFE000720983 /* AppDelegate.h */,
 				E7AC5120216EDFE000720983 /* AppDelegate.m */,
 				E7AC5122216EDFE000720983 /* ViewController.h */,
@@ -69,6 +79,27 @@
 				E7AC512E216EDFE100720983 /* main.m */,
 			);
 			path = ZHViewHelper;
+			sourceTree = "<group>";
+		};
+		E7AC5135216EE0A400720983 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E7AC5136216EE0D800720983 /* IBHelper */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E7AC5136216EE0D800720983 /* IBHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E7AC5139216EE0EE00720983 /* UIView+ZHIBInspectable.h */,
+				E7AC513C216EE0EF00720983 /* UIView+ZHIBInspectable.m */,
+				E7AC5137216EE0EE00720983 /* ZHButton.h */,
+				E7AC513B216EE0EF00720983 /* ZHButton.m */,
+				E7AC5138216EE0EE00720983 /* ZHView.h */,
+				E7AC513A216EE0EE00720983 /* ZHView.m */,
+			);
+			path = IBHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7AC513D216EE0EF00720983 /* ZHView.m in Sources */,
 				E7AC5124216EDFE000720983 /* ViewController.m in Sources */,
+				E7AC513F216EE0EF00720983 /* UIView+ZHIBInspectable.m in Sources */,
 				E7AC512F216EDFE100720983 /* main.m in Sources */,
+				E7AC513E216EE0EF00720983 /* ZHButton.m in Sources */,
 				E7AC5121216EDFE000720983 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3X6AR78KA;
 				INFOPLIST_FILE = ZHViewHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3X6AR78KA;
 				INFOPLIST_FILE = ZHViewHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
